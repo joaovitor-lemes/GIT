@@ -1,0 +1,9 @@
+numeros = [4, 9, 16, 25, 36, 49, 64, 81]
+
+raizes = numeros.map { |n| Math.sqrt(n) }
+
+puts "Números: #{numeros}"
+puts "Raízes quadradas:"
+raizes.each_with_index do |raiz, i|
+  puts "√#{numeros[i]} = #{raiz}"
+end
