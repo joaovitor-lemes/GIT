@@ -1,0 +1,18 @@
+function fibonacciQuadrado(n) {
+    const resultado = [];
+    let a = 0, b = 1;
+
+    for (let i = 0; i < n; i++) {
+        resultado.push(a * a); // termo ao quadrado
+        const temp = a + b;
+        a = b;
+        b = temp;
+    }
+
+    return resultado;
+}
+
+// Exemplo de uso:
+const termos = 10;
+console.log(`Sequência de Fibonacci ao quadrado (${termos} termos):`);
+console.log(fibonacciQuadrado(termos));
