@@ -1,1 +1,1 @@
-testando envio de codigo para o github
+testando envio de codigo para o github e estudando sobre pull and pushs
