@@ -7,6 +7,13 @@ def fibonacci(n):
     return seq
 
 # Exemplo de uso:
-termos = int(input("Digite o número de termos da sequência de Fibonacci: "))
+termos = int(input("Digite o número de termos da sequência de Fib: "))
 resultado = fibonacci(termos)
 print("Sequência de Fibonacci:", resultado)
+
+
+
+
+
+
+
