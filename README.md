@@ -16,3 +16,11 @@ Projeto de aprendizado 1
 
 Projeto de aprendizado 1
   Aprendendo sobre o Github Pages
+
+#### Linguagens 
+
+* PYTHON
+* HTML
+* JAVA
+* GO
+* C++
