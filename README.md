@@ -17,10 +17,17 @@ Projeto de aprendizado 1
 Projeto de aprendizado 1
   Aprendendo sobre o Github Pages
 
-#### Linguagens 
+### Linguagens 
 
 * PYTHON
 * HTML
 * JAVA
 * GO
 * C++
+
+### Estilos
+
+1. Negrito
+2. Itálico
+3. Sombreado
+
