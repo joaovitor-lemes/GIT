@@ -28,8 +28,8 @@ Projeto de aprendizado 1
 ### Estilos
 
 1. Negrito
-  1. Negrito 1
-  2. Negrito 2
+    1. Negrito 1
+    2. Negrito 2
 2. Itálico
   * Itálico 1
 3. Sombreado
