@@ -19,37 +19,14 @@ Projeto de aprendizado 1
 
 ### Linguagens 
 
-* *PYTHON*
-* **HTML**
-* **JAVA**
-* _GO_
+* PYTHON
+* HTML
+* JAVA
+* GO
 * C++
 
 ### Estilos
 
 1. Negrito
-    1. Negrito 1
-    2. Negrito 2
 2. Itálico
-  * Itálico 1
 3. Sombreado
-
-#### Aplicando uma Imagem
-
-![Logo Blockchain](https://revistasegurancaeletronica.com.br/wp-content/uploads/2021/09/blockchain-seguranca-de-dados-alem-do-setor-financeiro.jpg)
-
-### Código da Função
-
-``` javascript
-function soma(a,b){
-  return a+b;
-}
-  
-``` 
-
-## Lista de Tarefas 
-
-- [x] Área de Membros
-- [ ] Integração
-- [x] Visibilidade
-- [x] Estudo de Caso
