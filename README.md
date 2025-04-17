@@ -38,3 +38,12 @@ Projeto de aprendizado 1
 
 ![Logo Blockchain](https://revistasegurancaeletronica.com.br/wp-content/uploads/2021/09/blockchain-seguranca-de-dados-alem-do-setor-financeiro.jpg)
 
+### Código da Função
+
+``` javascript
+function soma(a,b){
+  return a+b;
+}
+  
+``` 
+
