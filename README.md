@@ -34,3 +34,7 @@ Projeto de aprendizado 1
   * Itálico 1
 3. Sombreado
 
+#### Aplicando uma Imagem
+
+![Logo Blockchain](https://revistasegurancaeletronica.com.br/wp-content/uploads/2021/09/blockchain-seguranca-de-dados-alem-do-setor-financeiro.jpg)
+
