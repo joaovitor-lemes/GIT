@@ -50,6 +50,6 @@ function soma(a,b){
 ## Lista de Tarefas 
 
 - [x] Área de Membros
-- [] Integração
+- [ ] Integração
 - [x] Visibilidade
 - [x] Estudo de Caso
