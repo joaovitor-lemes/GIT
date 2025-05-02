@@ -1,0 +1,136 @@
+const fs = require('fs');
+const readline = require('readline');
+
+const TASKS_FILE = 'tasks.json';
+
+// Função utilitária para carregar as tarefas
+function loadTasks() {
+  if (!fs.existsSync(TASKS_FILE)) return [];
+  const data = fs.readFileSync(TASKS_FILE, 'utf-8');
+  return JSON.parse(data);
+}
+
+// Função utilitária para salvar as tarefas
+function saveTasks(tasks) {
+  fs.writeFileSync(TASKS_FILE, JSON.stringify(tasks, null, 2));
+}
+
+// Interface de entrada do usuário
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+// Menu principal
+function showMenu() {
+  console.log('\n========= TO-DO CLI =========');
+  console.log('1. Adicionar tarefa');
+  console.log('2. Listar tarefas');
+  console.log('3. Marcar como concluída');
+  console.log('4. Remover tarefa');
+  console.log('5. Sair');
+  rl.question('Escolha uma opção: ', handleMenu);
+}
+
+// Lógica de cada opção
+function handleMenu(option) {
+  switch (option) {
+    case '1':
+      addTask();
+      break;
+    case '2':
+      listTasks();
+      break;
+    case '3':
+      completeTask();
+      break;
+    case '4':
+      deleteTask();
+      break;
+    case '5':
+      console.log('Saindo...');
+      rl.close();
+      break;
+    default:
+      console.log('Opção inválida!');
+      showMenu();
+  }
+}
+
+// Adicionar nova tarefa
+function addTask() {
+  rl.question('Digite a descrição da tarefa: ', (desc) => {
+    const tasks = loadTasks();
+    const newTask = {
+      id: Date.now(),
+      description: desc,
+      completed: false
+    };
+    tasks.push(newTask);
+    saveTasks(tasks);
+    console.log('Tarefa adicionada!');
+    showMenu();
+  });
+}
+
+// Listar tarefas
+function listTasks() {
+  const tasks = loadTasks();
+  if (tasks.length === 0) {
+    console.log('Nenhuma tarefa encontrada.');
+  } else {
+    console.log('\nTarefas:');
+    tasks.forEach((task, index) => {
+      const status = task.completed ? '[✔]' : '[ ]';
+      console.log(`${index + 1}. ${status} ${task.description}`);
+    });
+  }
+  showMenu();
+}
+
+// Concluir tarefa
+function completeTask() {
+  const tasks = loadTasks();
+  if (tasks.length === 0) {
+    console.log('Nenhuma tarefa para completar.');
+    showMenu();
+    return;
+  }
+  listTasks();
+  rl.question('Digite o número da tarefa para concluir: ', (num) => {
+    const index = parseInt(num) - 1;
+    if (tasks[index]) {
+      tasks[index].completed = true;
+      saveTasks(tasks);
+      console.log('Tarefa marcada como concluída!');
+    } else {
+      console.log('Tarefa inválida!');
+    }
+    showMenu();
+  });
+}
+
+// Remover tarefa
+function deleteTask() {
+  const tasks = loadTasks();
+  if (tasks.length === 0) {
+    console.log('Nenhuma tarefa para remover.');
+    showMenu();
+    return;
+  }
+  listTasks();
+  rl.question('Digite o número da tarefa para remover: ', (num) => {
+    const index = parseInt(num) - 1;
+    if (tasks[index]) {
+      tasks.splice(index, 1);
+      saveTasks(tasks);
+      console.log('Tarefa removida!');
+    } else {
+      console.log('Tarefa inválida!');
+    }
+    showMenu();
+  });
+}
+
+// Iniciar o app
+showMenu();
