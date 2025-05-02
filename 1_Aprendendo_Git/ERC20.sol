@@ -55,15 +55,15 @@ contract MeuToken is IERC20 {
 
     function transferFrom(address sender, address recipient, uint256 amount) public override returns (bool) {
         uint256 currentAllowance = _allowances[sender][msg.sender];
-        require(currentAllowance >= amount, "ERC20: transferência acima do permitido");
+        require(currentAllowance >= amount, "ERC20: transferencia acima do permitido");
         _transfer(sender, recipient, amount);
         _approve(sender, msg.sender, currentAllowance - amount);
         return true;
     }
 
     function _transfer(address from, address to, uint256 amount) internal {
-        require(from != address(0), "Endereço de origem inválido");
-        require(to != address(0), "Endereço de destino inválido");
+        require(from != address(0), "Endereco de origem invalido");
+        require(to != address(0), "Endereco de destino invalido");
         require(_balances[from] >= amount, "Saldo insuficiente");
 
         _balances[from] -= amount;
@@ -72,7 +72,7 @@ contract MeuToken is IERC20 {
     }
 
     function _mint(address account, uint256 amount) internal {
-        require(account != address(0), "Endereço inválido para mint");
+        require(account != address(0), "Endereco invalido para mint");
 
         _totalSupply += amount;
         _balances[account] += amount;
@@ -80,8 +80,8 @@ contract MeuToken is IERC20 {
     }
 
     function _approve(address owner, address spender, uint256 amount) internal {
-        require(owner != address(0), "Dono inválido");
-        require(spender != address(0), "Spender inválido");
+        require(owner != address(0), "Dono invalido");
+        require(spender != address(0), "Spender invalido");
 
         _allowances[owner][spender] = amount;
         emit Approval(owner, spender, amount);
