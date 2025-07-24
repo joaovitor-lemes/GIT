@@ -1,8 +1,10 @@
+
 def parouimpar(number):
+
     if number % 2 == 0:
-        print("O numero é par")
-    else:
-        print("O numero não é par")
+        return "O numero é par"
+    
+    return "O numero não é par"
     
 parouimpar(25)
 
@@ -15,5 +17,5 @@ def mult(*args):
         
     return total
 
-print(mult(1,2,3,5,9))
+#print(mult(1,2,3,5,9))
         
