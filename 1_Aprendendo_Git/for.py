@@ -42,3 +42,8 @@ print("Obtenha apenas os números em uma frase")
 frase = "Em 1984, houve 13 ocorrências de um protesto com mais de 1.000 pessoas presentes"
 novalista5 = [num for num in frase if num.isnumeric()]
 print(novalista5, "\n")
+
+print("Use uma list Comprehension aninhada para encontrar todos os números de 1 a 1000 que são divisíveis por qualquer dígito único além de 1 (2 a 9)")
+primos = [n for n in range(100) if all(n % d != 0 for d in range(2, int(n**0.5) + 1))]
+print(primos)
+
