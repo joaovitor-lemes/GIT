@@ -24,3 +24,22 @@ print(pares)
 nomes = ['joao', 'godofredo', 'alice']
 ordenados = sorted(nomes, key = lambda nome: len(nome)) #Ordandando pelo tamanho da palavra
 print(ordenados)
+
+# Escreva um programa em Python para criar uma função lambda que adicione 15 a 
+#um determinado número passado como argumento. Crie também uma função lambda que multiplique o argumento x pelo argumento y e imprima o resultado.
+
+add15 = lambda x:x+15
+mult = lambda x,y: x*y
+
+print(add15(59), mult(9,2))
+
+#Escreva um programa em Python para descobrir se uma determinada string começa com um determinado caractere usando Lambda.
+
+determina = lambda x:True if str(x)[0] == "l" else False 
+print(determina("lais"))
+
+#Escreva um programa em Python para verificar se uma determinada string é um número ou não usando Lambda.
+
+e_numero = lambda x: True if type(x) == int else False
+print(e_numero(3))
+
