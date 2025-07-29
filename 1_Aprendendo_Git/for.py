@@ -45,5 +45,27 @@ print(novalista5, "\n")
 
 print("Use uma list Comprehension aninhada para encontrar todos os números de 1 a 1000 que são divisíveis por qualquer dígito único além de 1 (2 a 9)")
 primos = [n for n in range(100) if all(n % d != 0 for d in range(2, int(n**0.5) + 1))]
-print(primos)
+print(primos, "\n")
+
+contador =0
+soma = 0
+
+while soma <30:
+    contador = contador +1
+    soma += contador
+    print(soma)
+
+
+import time
+
+n = 5
+while n > 0:
+    print(n)
+    n -= 1
+    time.sleep(1)
+print("Tempo esgotado!")
+
+
+
+
 
