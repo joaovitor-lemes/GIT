@@ -1,5 +1,5 @@
 import time
-
+import math
 
 def tempo(func):
     def mediadora():
@@ -8,6 +8,7 @@ def tempo(func):
         fim = time.time()
         print(f'O tempo foi de {fim - inicio}')
     return mediadora
+
 
 
 
@@ -24,3 +25,21 @@ def lista_ordenada(lista = [5,9,13,85,12,44, 125,1,0,8,65,96,47]):
     return print(lista2)
 
 lista_ordenada()
+
+@tempo
+def aplica_raiz(lista = [25, 144, 69, 258, 248, 27, 63]):
+    lista3 = list(map(lambda x:math.sqrt(x), lista).round(2))
+    return print(lista3)
+
+aplica_raiz()
+
+
+def mul_for(list1 = [1,2,3], list2 = [4,5,6]):
+    for i in list1:
+        for j in list2:
+            print(i, j)
+
+mul_for()
+
+lis = [(i,j) for i in [1,2,3] for j in [4,5,6]]
+print(lis)
