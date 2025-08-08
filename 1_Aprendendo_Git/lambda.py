@@ -43,3 +43,7 @@ print(determina("lais"))
 e_numero = lambda x: True if type(x) == int else False
 print(e_numero(3))
 
+
+# Escreva um programa em Python para criar séries de Fibonacci de até n usando Lambda.
+fibo = lambda x, n: ...
+
