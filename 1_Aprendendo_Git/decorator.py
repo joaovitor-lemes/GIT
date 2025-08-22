@@ -28,7 +28,7 @@ lista_ordenada()
 
 @tempo
 def aplica_raiz(lista = [25, 144, 69, 258, 248, 27, 63]):
-    lista3 = list(map(lambda x:math.sqrt(x), lista).round(2))
+    lista3 = list(map(lambda x:math.sqrt(x), lista))
     return print(lista3)
 
 aplica_raiz()
@@ -41,5 +41,3 @@ def mul_for(list1 = [1,2,3], list2 = [4,5,6]):
 
 mul_for()
 
-lis = [(i,j) for i in [1,2,3] for j in [4,5,6]]
-print(lis)

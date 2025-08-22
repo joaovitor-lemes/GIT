@@ -47,6 +47,10 @@ print("Use uma list Comprehension aninhada para encontrar todos os números de 1
 primos = [n for n in range(100) if all(n % d != 0 for d in range(2, int(n**0.5) + 1))]
 print(primos, "\n")
 
+print("Crie uma combinação de elementos em uma lista")
+lis = [(i,j) for i in [1,2,3] for j in [4,5,6]]
+print(lis)
+
 contador =0
 soma = 0
 
